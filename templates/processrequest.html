@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Добавление игрока</title>
+    </head>
+    <body>
+        <form action="{{ url_for('processRequest')}}" method="POST"> 
+            <input class="form-control" type="text" name="reqId" placeholder="Введите id запроса"><br>
+            <button class="btn btn-success">Обработка</button><br><br>
+        </form>
+        <form action="{{ url_for('index')}}">
+            <button class="btn btn-primary">Назад</button>
+        </form>
+    </body>
+</html>
