@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Добавление запроса</title>
+    </head>
+    <body>
+        <form action="{{ url_for('addRequest')}}" method="POST"> 
+            <h1>Введите данные запроса</h1>
+            <input class="form-control" type="text" name="rType" placeholder="Тип запроса (0-add 1-edit)"><br>
+            <input class="form-control" type="text" name="homeAddress" placeholder="Адрес"><br>
+            <input class="form-control" type="number" name="area" placeholder="Площадь"><br>
+            <input class="form-control" type="number" name="cost" placeholder="Цена"><br>
+            <input class="form-control" type="text" name="newOwner" placeholder="Адрес кошелька владельца"><br>
+            <button class="btn btn-success">Добавить</button><br><br>
+        </form>
+        <form action="{{ url_for('index')}}">
+            <button class="btn btn-primary">Назад</button>
+        </form>
+    </body>
+</html>
